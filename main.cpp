@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -7,6 +8,7 @@
 #include "SalariedEmployee.h"
 
 using namespace std;
+
 
 // Reads CSV: ID,Name,Type,PayPerHour,WorkedHours,YearlyPayment
 void readFile(const string& filename, vector<HourlyEmployee>& hourlyEmployees, vector<SalariedEmployee>& salariedEmployees) {
@@ -37,15 +39,31 @@ void readFile(const string& filename, vector<HourlyEmployee>& hourlyEmployees, v
 
 int main() {
     
-    /* TODO: Define two vectors: HourlyEmployee and SalariedEmployee */
+    // TODO: Define two vectors: HourlyEmployee and SalariedEmployee 
+vector<HourlyEmployee> hourlyEmployees;
+vector<SalariedEmployee> salariedEmployees;
 
     // TODO: Add vectors to readFile call, hourly first
-    readFile("employee_info.csv", , );
+    readFile("employee_info.csv", hourlyEmployees, salariedEmployees);
     double result = 0;
 
-    // TODO: Print the results
-    // Remember that you can use the range based for loop
-    // Display the results of each type of employee
+
+
+cout << "Hourly Employees:\n";
+for (size_t i = 0; i < hourlyEmployees.size(); ++i) { //Funcion para obtener los hourlyEmployees 
+    cout << "Name: " << hourlyEmployees[i].getname() //Desplegar nombre
+         << " / Pay this period: $" << hourlyEmployees[i].calculatePay() //Desplegar paga por hora
+         << endl;
+}
+
+cout << "\nSalaried Employees:\n";
+for (size_t i = 0; i < salariedEmployees.size(); ++i) { //Funcion para obtener salariedEmployees
+    cout << "Name: " << salariedEmployees[i].getname() // Desplegar nombre
+         << " / Pay this period: $" << salariedEmployees[i].calculatePay() //Desplegar salario anual
+         << endl;
+}
 
     return 0;
 }
+
+   //Necesito ayuda con el id. No entendi como poder desplegarlo
