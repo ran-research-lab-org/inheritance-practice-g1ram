@@ -50,16 +50,16 @@ vector<SalariedEmployee> salariedEmployees;
 
 
 cout << "Hourly Employees:\n";
-for (size_t i = 0; i < hourlyEmployees.size(); ++i) {
-    cout << "Name: " << hourlyEmployees[i].getname()
-         << " / Pay this period: $" << hourlyEmployees[i].calculatePay()
+for (size_t i = 0; i < hourlyEmployees.size(); ++i) { //Funcion para obtener los hourlyEmployees 
+    cout << "Name: " << hourlyEmployees[i].getname() //Desplegar nombre
+         << " / Pay this period: $" << hourlyEmployees[i].calculatePay() //Desplegar paga por hora
          << endl;
 }
 
 cout << "\nSalaried Employees:\n";
-for (size_t i = 0; i < salariedEmployees.size(); ++i) {
-    cout << "Name: " << salariedEmployees[i].getname()
-         << " / Pay this period: $" << salariedEmployees[i].calculatePay()
+for (size_t i = 0; i < salariedEmployees.size(); ++i) { //Funcion para obtener salariedEmployees
+    cout << "Name: " << salariedEmployees[i].getname() // Desplegar nombre
+         << " / Pay this period: $" << salariedEmployees[i].calculatePay() //Desplegar salario anual
          << endl;
 }
 

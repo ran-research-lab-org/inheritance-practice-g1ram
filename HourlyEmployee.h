@@ -1,19 +1,20 @@
+
 #ifndef HOURLYEMPLOYEE_H
 #define HOURLYEMPLOYEE_H
 
 #include "Employee.h"
-
+//Clase Hija HourlyEmployee
 class HourlyEmployee : public Employee {
 private:
-    double payPerHour;
-    double workedHours;
+    double payPerHour; //Pago por hora
+    double workedHours; //Horas trabajadas
 public: 
-    HourlyEmployee();
-    HourlyEmployee(const std::string& name, int id, double payPerHour, double workedHours);
+    HourlyEmployee(); //Constructor default
+    HourlyEmployee(const std::string& name, int id, double payPerHour, double workedHours); //Constructor con name, id, payPerHour, workedHours especificas
     
-    double calculatePay() const override;
-    double getpayPerHour() const;
-    double getworkedHours();
+    double calculatePay() const override; //Funcion que calcula la paga del empleado
+    double getpayPerHour() const; //Funcion que devuelve el pago por hora
+    double getworkedHours() ; //Funcion que devuelve las horas trabajadas
 };
 
 #endif
